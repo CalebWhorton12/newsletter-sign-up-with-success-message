@@ -1,0 +1,191 @@
+/* FrontEnd Mentor Default Styles */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+.attribution a {
+  color: #fff;
+}
+/* **************************** */
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(235, 18%, 26%);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.contact-card {
+  background: hsl(0, 0%, 100%);
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  display: none;
+}
+
+.contact-card .text-content {
+  align-self: self-start;
+  margin: 80px 0 0 0;
+  padding: 40px;
+}
+
+.contact-card .text-content h1 {
+  font-size: 45px;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.contact-card .text-content ul {
+  margin: 30px 0 20px 0;
+  text-align: left;
+}
+
+.contact-card .text-content ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.contact-card .text-content ul li img {
+  margin: 0px 10px 0px 0px;
+}
+
+.contact-card .text-content .small {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(234, 29%, 20%);
+  margin: 0 0 10px 0;
+}
+
+.contact-card .text-content .small small:last-child {
+  display: none;
+}
+.contact-card .text-content .small small.error {
+  color: red;
+  display: block;
+}
+
+.contact-card .text-content #email {
+  padding: 15px;
+  width: 90%;
+  border-radius: 10px;
+  border: hsl(235, 18%, 26%) solid 1px;
+  width: 80%;
+}
+
+.contact-card .text-content #email.error {
+  border: red solid 1px;
+  background-color: hsl(4, 100%, 67%, 0.5);
+}
+
+.contact-card .text-content button[type='submit'] {
+  cursor: pointer;
+  background-color: hsl(234, 29%, 20%);
+  color: #fff;
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0 0 0;
+  transition: all 0.2s;
+}
+
+.contact-card .text-content button[type='submit']:hover {
+  border: none;
+  background-color: hsl(4, 100%, 67%);
+}
+
+/* Success Box */
+
+.success-box {
+  background: hsl(0, 0%, 100%);
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 20px;
+  display: none;
+}
+
+.success-box h2 {
+  font-size: 35px;
+  margin: 30px 0 20px 0;
+}
+
+.success-box button[type='submit'] {
+  cursor: pointer;
+  background-color: hsl(234, 29%, 20%);
+  color: #fff;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 30px 0 0 0;
+  transition: all 0.2s;
+}
+
+.success-box .email-bold {
+  font-weight: bold;
+  color: hsl(234, 29%, 20%);
+}
+
+.success-box button[type='submit']:hover {
+  border: none;
+  background-color: hsl(4, 100%, 67%);
+}
+
+.mobile-img {
+  display: none;
+}
+
+/* Toggle classes */
+
+.show {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .contact-card {
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
+  .desktop-img {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+  }
+
+  .contact-card .text-content #email {
+    width: 100%;
+  }
+
+  .contact-card .text-content button[type='submit'] {
+    width: 100%;
+  }
+
+  .success-box {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .success-box #dismiss {
+  }
+}
